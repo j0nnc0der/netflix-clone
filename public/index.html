@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Wolverine Returns</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/main.css">
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <style>
+        * {
+            box-sizing: content-box;
+            /* box-sizing: border-box;*/
+        }
+        
+        #header {
+            background: black;
+            color: white;
+            overflow: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        
+        #header a {
+            font-family: helvetica;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: red;
+        }
+        
+        .logo {
+            float: left;
+            display: inline-block;
+            background: red;
+            padding: 20px;
+            margin-right: 25px;
+        }
+        
+        .leftMenu {
+            float: left;
+            display: inline-block;
+        }
+        
+        .leftMenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .leftMenu ul li {
+            display: inline-block;
+            padding: 20px;
+        }
+        
+        .leftMenu ul li a {
+            color: white;
+            !important;
+        }
+        
+        .leftMenu ul li a.dropdown {
+            color: red;
+        }
+        
+        .rightMenu {
+            float: right;
+            display: inline-block;
+            color: black;
+        }
+        
+        .rightMenu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .rightMenu ul li {
+            display: inline-block;
+            padding: 20px;
+        }
+        
+        .rightMenu ul li a {
+            color: white;
+        }
+        
+        .leftMenu ul li a:hover,
+        .rightMenu ul li a:hover {
+            color: red;
+        }
+        
+        #LargeImage {
+            padding: 350px 25px;
+            background: -webkit-linear-gradient(61.8deg, rgba(193, 66, 66, 0.1) 0%, #000000 100%), url(https://image.ibb.co/ms5XQA/wolverine.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .description-box {
+            position: relative;
+            top: -161px;
+            height: 0%;
+            width: 61.8%;
+        }
+        
+        .description-box h1 {
+            position: relative;
+            bottom: -333px;
+            font-family: serif;
+            font-weight: 700;
+            font-size: 60px;
+            margin: 0;
+            color: white;
+        }
+        
+        .description-box h3 {
+            font-family: helvetica;
+            font-weight: 618;
+            font-size: 33px;
+            margin: 0;
+            color: white;
+        }
+        
+        .description-box h4 {
+            position: relative;
+            bottom: -161px;
+            font-family: helvetica;
+            font-weight: 300;
+            margin: 0px;
+            color: white;
+        }
+        
+        .description-box p {
+            position: relative;
+            bottom: -333px;
+            margin-top: 25px;
+            !important;
+            font-family: helvetica;
+            font-weight: 161.8;
+            font-size: 16.8px;
+            margin: 0px;
+            color: white;
+        }
+        
+        .button1 {
+            position: relative;
+            bottom: -366px;
+            display: inline-block;
+            padding: 12px 20px;
+            background: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+        
+        .button2 {
+            position: relative;
+            bottom: -366px;
+            display: inline-block;
+            padding: 10px 18px;
+            border: 2px solid #000;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f2f6f8+0,d8e1e7+23,b5c6d0+48,000000+99,f2f6f8+100,000000+100&1+0,0.88+76 */
+            background: rgba(181, 68, 52, 1)
+        }
+        
+        .button1:hover {
+            background: rgba(181, 68, 52, 1)
+        }
+        
+        .button2:hover {
+            background: rgba(181, 68, 52, 1) border: 2px solid rgba(0, 0, 0, .6);
+        }
+        
+        #videoSection {
+            width: 100%;
+            background: black;
+        }
+        
+        .row {
+            font-size: 0;
+            width: 100%;
+        }
+        
+        .videoBoxes {
+            display: inline-block;
+            background: red;
+            width: 300px;
+            min-height: 150px;
+            font-size: 6px;
+            margin: 2.5%;
+            /*padding: 15px; */
+        }
+        
+        .videoBoxes h4 {
+            font-family: Helvetica, sans-serif margin: 0;
+            padding: 0;
+            font-size: 30px;
+            color: white;
+        }
+        
+        .videoBoxes p {
+            display: none;
+        }
+        
+        .video1 {
+            background: -webkit-linear-gradient(61.8deg, rgba(193, 66, 66, 0.1) 0%, #000000 100%), url(https://www.screengeek.net/wp-content/uploads/2018/12/venom-movie.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .video2 {
+            background: -webkit-linear-gradient(61.8deg, rgba(193, 66, 66, 0.1) 0%, #000000 100%), url(https://ae01.alicdn.com/kf/HTB131JGmpkoBKNjSZFkq6z4tFXas/DIY-frame-The-Dark-Knight-Movie-Film-Poster-Batman-And-Joker-Fabric-Silk-Poster-Print-Posters.jpg_640x640.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .video3 {
+            background: -webkit-linear-gradient(61.8deg, rgba(193, 66, 66, 0.1) 0%, #000000 100%), url(https://shyfyy.files.wordpress.com/2013/05/mosbannernew.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .video4 {
+            background: -webkit-linear-gradient(61.8deg, rgba(193, 66, 66, 0.1) 0%, #000000 100%), url(http://moviesplexus.com/wp-content/uploads/2017/02/Logan-2.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        
+        .video5 {
+            background: -webkit-linear-gradient(61.8deg, rgba(193, 66, 66, 0.1) 0%, #000000 100%), url(http://touchtonebuilds.com/clean/Movies/backup2/civilwar.jpg);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        /* For Mobile*/
+        
+        @media only screen and (max-width: 600px) {
+            /* phone / tablet */
+            .videoBoxes {
+                width: 95%;
+                margin: 2.5%;
+            }
+            .videoBoxes h4 {
+                font-family: Helvetica;
+                font-weight: 100;
+                font-size: 33px;
+            }
+            .videoBoxes p {
+                display: none;
+                /*display: block;
+                font-family: Helvetica;
+                font-weight: 300;
+                font-size: 20px;
+                color: #fff; */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="logo">Netflix</div>
+        <div class="leftMenu">
+            <ul>
+                <li>
+                    <a href="browse.html" class="dropdown">Browse</a>
+                </li>
+                <li>
+                    <a href="kids.html">Kids</a>
+                </li>
+                <li>
+                    <a href="dvd.html">DVD</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="rightMenu">
+            <ul>
+                <li>
+                    <a href="search.html">Search</a>
+                </li>
+                <li>
+                    <a href="bell.html">Bell</a>
+                </li>
+                <li>
+                    <a href="name.html">Username</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="LargeImage">
+        <div class="description-box">
+            <h4>Netflix Presents.....</h4>
+            <h1>THE BEAST R E T U R N S</h1>
+            <h3>Coming Real Soon</h3>
+            <p>Return of Wolverine is a comic book miniseries published by Marvel Comics. This miniseries will follow up on the events that transpired in the "Death of Wolverine" and "Hunt for Wolverine" storylines and explain how Wolverine returned from
+                the dead.</p>
+            <div class="button1"> Button 1</div>
+            <div class="button2"> Button 2</div>
+        </div>
+    </div>
+
+
+    <div id="videoSection">
+        <div class="row">
+            <div class="videoBoxes video1">
+                <h4>Venom</h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries
+                </p>
+            </div>
+            <div class="videoBoxes video2">
+                <h4>Dark Knight</h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries
+                </p>
+            </div>
+            <div class="videoBoxes video3">
+                <h4>C America: Civil War</h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries
+                </p>
+            </div>
+            <div class="videoBoxes video4">
+                <h4>Logan</h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries
+                </p>
+            </div>
+            <div class="videoBoxes video5">
+                <h4>Man of Steel</h4>
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                    survived not only five centuries
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
